@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% block header %}
+
+<h2>{% block title %}Explore{% endblock title %}</h2>
+
+{% endblock header %} 
+
+{% block content %}
+
+
+  {% for q in question %}
+    <div class="question-card">
+      <form action="">
+      <p style="font-weight: 700;">{{q['question']}}</p>
+
+      {% for option in q['options']%}
+        <input type="checkbox" name="option" id="option">
+        <label for="option">{{option}}</label><br>
+        <!-- <p style="padding-left: 50px;">{{option}}</p> -->
+      {% endfor %}
+        <button>Next</button>
+    </form>
+  </div>
+  {% endfor %} 
+
+  <p markdown="1">{{res}}</p>
+
+{% endblock content %}

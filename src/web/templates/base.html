@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>HobbyVerse | {% block title %}{% endblock title %}</title>
+    </head>
+    <body>
+        <h1>HobbyVerse</h1>
+        <section>
+            <header>{% block header %}{% endblock header %}</header>
+            <main>
+                {% block content %}
+                <p>No Hobbies? We got you!</p>
+                {% endblock content %}
+            </main>
+        </section>
+    </body>
+</html>
