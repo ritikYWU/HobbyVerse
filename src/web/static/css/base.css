@@ -1,0 +1,131 @@
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+*{
+    font-family: "League Spartan", sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(to right, #d0e3f0 100%, #ffffff 100%);
+    margin: 0;
+}
+
+.logo{
+    padding: 5px 20px;
+
+}
+
+main{
+    text-align: center;
+    padding: 30px 0;
+    background: linear-gradient(to bottom, #d0e3f0 70%, #ffffff 100%);
+
+}
+
+.text p{
+    padding: 10px 0 50px;
+}
+
+.explore-form{
+    /* display: flex; */
+    /* justify-content: left; */
+    /* align-items: center; */
+    /* flex-direction: column; */
+    margin: 0 auto;
+    width: 40%;
+    height: auto;
+    text-align: left;
+}
+
+.question-card{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+}
+
+label{
+    padding: 5px 0;
+}
+
+.question{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.custom-checkbox input[type="checkbox"] {
+    display: none;
+}
+
+.custom-checkbox {
+    /* display: inline-flex; */
+    /* align-items: center; */
+    cursor: pointer;
+    font-size: 16px;
+    user-select: none;
+    position: relative;
+    padding-left: 30px;
+}
+
+
+.custom-checkbox .checkmark {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #d4d4d4; 
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.custom-checkbox:hover .checkmark {
+    background-color: #b5b5b5; 
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .checkmark {
+    background-color: #4caf50;
+}
+
+.custom-checkbox .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+.custom-checkbox input[type="checkbox"]:checked + .checkmark:after {
+    display: block;
+}
+
+.custom-checkbox .checkmark:after {
+    left: 7px;
+    top: 3px;
+    width: 6px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+}
+
+.btn {
+    background-color: rgba(21, 196, 226, 1);; 
+    color: white; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 5px; 
+    font-size: 16px; 
+    font-weight: bold; 
+    cursor: pointer; 
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    margin-left: 100px;
+}
+
+.btn:hover {
+    background-color: rgba(21, 196, 226, .6);; 
+}
