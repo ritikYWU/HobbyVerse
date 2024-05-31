@@ -2,16 +2,24 @@
 <html lang="en">
     <head>
         <title>HobbyVerse | {% block title %}{% endblock title %}</title>
+        <link rel="stylesheet" href="../static/css/base.css">
     </head>
     <body>
-        <h1>HobbyVerse</h1>
+        <nav class="navbar">
+            <a href="{{url_for('pages.home')}}">
+           <img src="../static/img/hobbyverse.png" alt="" width="250px" height="75px" class="logo">
+        </a>
+        <a href="https://github.com/RitiKS-11">
+            <img src="../static/img/github-logo.png" alt="" width="70px" height="40px" class="logo">
+         </a>
+        </nav>
         <section>
-            <header>{% block header %}{% endblock header %}</header>
             <main>
                 {% block content %}
-                <p>No Hobbies? We got you!</p>
                 {% endblock content %}
             </main>
         </section>
+
+        <script src="../static/js/index.js"></script>
     </body>
 </html>

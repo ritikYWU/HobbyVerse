@@ -5,7 +5,26 @@
 {% endblock header %}
 
 {% block content %}
-  <p>
-    Learn more about this project by visiting the <a href="{{ url_for('pages.explore') }}">About page</a>.
-  </p>
+<div class="container">
+  <section class="intro">
+      <h2>Discover Your New Favorite Hobby</h2>
+      <div class="content">
+          <div class="text">
+              <p>Are you looking for a new hobby but don't know where to start? You're in the right place! At HobbyVerse, we help you discover activities that match your interests and personality. Whether you're looking for something active, creative, relaxing, or intellectually stimulating, we have the perfect hobby for you.</p>
+              <p>Ready to find your perfect hobby? Click the button below to begin your journey!</p>
+              <a href="{{url_for('pages.explore')}}" class="cta">
+
+              <button onclick="window.location.href='quiz.html'">Explore</button>
+            </a>
+
+          </div>
+          <div class="image">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStRBsam47OXE7Unx8ztfAt-JlsO6HCzXqXBA&s" alt="Hobby Image">
+          </div>
+      </div>
+  </section>
+</div>
+<footer class="footer">
+  <p>&copy; 2024 HobbyVerse. All rights reserved.</p>
+</footer>
 {% endblock content %}
