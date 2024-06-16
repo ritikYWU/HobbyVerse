@@ -1,7 +1,8 @@
 import google.generativeai as genai
 from dotenv import load_dotenv
+import os
 
-from prompts import prompt, questions
+from src.core.prompts import questions, get_prompt
 
 def setup_gemini():
     load_dotenv()
@@ -12,17 +13,10 @@ def setup_gemini():
 
     return model
 
-def gemini_response(user_answer):
+def gemini_response(prompt: str):
     model = setup_gemini()
-
-    gemini_prompt = prompt(user_answer)
-
-    print(gemini_prompt)
-    
-    response = model.generate_content(gemini_prompt)
-    print('\n\n\n')
-
-    print(response.text)
+    response = model.generate_content(prompt)
+    return response.text
 
 
 def ask_questiosn():
@@ -41,7 +35,8 @@ def ask_questiosn():
 
 def main():
     qa = ask_questiosn()
-    gemini_response(qa)
+    res = gemini_response(qa)
+    return res
 
 if __name__ == "__main__":
     main()

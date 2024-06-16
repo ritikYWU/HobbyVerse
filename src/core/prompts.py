@@ -1,7 +1,10 @@
 
 
-def prompt(user_answer: list) -> str:
-    gemini_prompt = f'''Given someone who enjoys {user_answer[0]} activities, has {user_answer[1]} a week to dedicate, and wants to {user_answer[2]}, prefers to do activities {user_answer[3]}, and has a preference for {user_answer[4]} hobbies, what is a suitable hobby recommendation? Additionally, suggest 3-5 related hobbies.
+def get_prompt(user_answer: list) -> str:
+    gemini_prompt = f'''
+        Given someone who enjoys {user_answer[0]} activities, has {user_answer[1]} a week to dedicate, and wants to {user_answer[2]}, \
+        prefers to do activities {user_answer[3]}, and has a preference for {user_answer[4]} hobbies, what is a suitable hobby recommendation? \
+        Additionally, suggest 3-5 related hobbies.
     '''
 
     return gemini_prompt
@@ -10,7 +13,8 @@ def prompt(user_answer: list) -> str:
 def questions() -> list:
     """Returns list of questions"""
     questions_options = [
-        {
+    {
+            "id": 1,
             "question": "What kind of activity are you most interested in?",
             "options": [
                 "Physical activity that gets me moving (e.g., running, dancing)",
@@ -20,6 +24,7 @@ def questions() -> list:
             ]
         },
         {
+            "id": 2,
             "question": "How much time are you realistically willing to dedicate to a hobby each week?",
             "options": [
                 "Less than 30 minutes",
@@ -29,6 +34,7 @@ def questions() -> list:
             ]
         },
         {
+            "id": 3,
             "question": "What is your primary goal for taking up a new hobby?",
             "options": [
                 "To relax and de-stress after work",
@@ -38,6 +44,7 @@ def questions() -> list:
             ]
         },
         {
+            "id": 4,
             "question": "Where would you prefer to do your hobbies?",
             "options": [
                 "Indoors",
@@ -46,6 +53,7 @@ def questions() -> list:
             ]
         },
         {
+            "id": 5,
             "question": "What is your budget preference for hobbies?",
             "options": [
                 "Free (no cost involved)",
@@ -54,5 +62,6 @@ def questions() -> list:
             ]
         }
     ]
+
 
     return questions_options
